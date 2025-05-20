@@ -9,13 +9,40 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
 
 ## Algorithm
 ### Step 1:
-Initialize a zero matrix a of size n×(n+1) for the augmented matrix and a zero vector x for the solutions.
+numpy (np): Provides the zeros() function to create arrays/matrices.
+
+sys: Provides sys.exit() to terminate the program in case of mathematical errors (like division by zero).
+
+
 ### Step 2:
-Input the augmented matrix elements from the user into a.
+input(): Reads user input as a string.
+
+int(): Converts string input to an integer (number of equations and unknowns).
+
+
 ### Step 3:
-Apply Gaussian Elimination to transform the matrix into an upper triangular form, checking for zero pivots.
+np.zeros((rows, columns)): Creates a matrix or vector filled with zeros.
+Nested loops to fill each row i and column j of matrix a.
+
+float(input()): Reads user input, converts it to a float, and stores it in matrix a.
 ### Step 4:
-Perform Back Substitution to find the solution vector x and print the values of all unknowns.
+Checks if diagonal element a[i][i] is zero (division not allowed).
+
+sys.exit(): Terminates the program if division by zero would occur.
+For each equation from bottom to top:
+
+Start with the RHS.
+
+Subtract all known values multiplied by their coefficients.
+
+Divide by the coefficient of the unknown.
+
+### Step 5:
+Prints each value of x[i] to 2 decimal places.
+
+%0.2f is format specifier to show two decimal places.
+
+end='' avoids a new line between outputs.
 
 ## Program:
 ```
